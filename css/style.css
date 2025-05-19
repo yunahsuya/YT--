@@ -1,0 +1,512 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* ----------------------------------- 頭以外 ------------------------------------  */
+
+html,
+body {
+  /* width: 100%; */
+  /* height: 100%; */
+
+  /* 設定字體 */
+  font-family: "Roboto", "Arial", sans-serif;
+
+  /* background: black; */
+}
+
+/* ----------------------------------- 最上面 ------------------------------------  */
+
+#header {
+  width: 100%;
+  height: 12%;
+
+  /* 固定版面 */
+  position: fixed;
+
+  top: 0;
+
+  background-color: rgb(139, 13, 185);
+}
+
+/* ______________________________________ header開頭 => 1. 側邊欄(button、icon)、2. YT icon ______________________________________________  */
+
+/* -------------------------------------- header開頭 => 1. 側邊欄(button) ------------------------------------  */
+#header .container .header_start .header_bar_button {
+  width: 40px;
+  height: 40px;
+
+  /* 不要背景色 */
+  background: none;
+
+  /* 不要框線 */
+  border: none;
+
+  cursor: pointer;
+
+  position: absolute;
+  left: 2%;
+  top: 25%;
+
+  /* background: chartreuse; */
+}
+
+/* ------------------------------------ header開頭 => 1. 側邊欄(icon) ------------------------------------  */
+#header .container .header_start .header_bar_button i {
+  font-size: 2rem;
+  color: white;
+}
+
+/* ------------------------------------ header開頭 => 2. YTicon ------------------------------------  */
+
+#header .container .header_start .header_YTicon {
+  width: 125px;
+  height: 55px;
+
+  color: white;
+
+  cursor: pointer;
+
+  position: absolute;
+  left: 7%;
+  top: 15%;
+}
+
+/* ______________________________________ header中間 => 1. 搜尋框(input、placeholder)、2. 搜尋按鈕(button、icon) ______________________________________________  */
+
+/* -------------------------------------- header中間 => 1. 搜尋框(input) ------------------------------------  */
+
+#header .container .header_mid input {
+  width: 50%;
+  height: 50px;
+  /* background: black; */
+
+  /* border: 1px solid #2477e3; */
+
+  border-radius: 40px;
+
+  cursor: pointer;
+
+  position: absolute;
+  left: 48%;
+  top: 20%;
+
+  transform: translate(-50%, -10%);
+}
+
+/* ---------------------------------- header中間 => 1. 搜尋框(placeholder) -> 設定 搜尋 button 字 ------------------------------------  */
+
+/* 設定 搜尋 button 字 */
+#header .container .header_mid input::placeholder {
+  font-size: 25px;
+
+  /* 文字右邊增加空格 */
+  padding: 50px 1rem;
+}
+
+/* ---------------------------------- header中間 => 2. 搜尋按鈕(button) ------------------------------------  */
+
+#header .container .header_mid .header_search_button {
+  width: 6%;
+  height: 56px;
+  border-radius: 0 40px 40px 0;
+
+  background: #353535;
+
+  cursor: pointer;
+
+  position: absolute;
+  left: 69%;
+  top: 20%;
+  transform: translate(-27%, -10%);
+}
+
+/* ------------------------------------- header中間 => 2. 搜尋按鈕(icon) ------------------------------------  */
+
+#header .container .header_mid .header_search_button i {
+  font-size: 40px;
+  color: white;
+
+  position: absolute;
+  left: 45%;
+  top: 20%;
+  transform: translate(-40%, -10%);
+}
+
+/* ______________________________________ header結束 => 1. 麥克風(button、icon)、2. 帳戶(button、img) ______________________________________________  */
+
+/* -------------------------------------- header結束 ------------------------------------  */
+
+/* -------------------------------------- header結束 => 1. 麥克風(button) ------------------------------------  */
+#header .container .header_end .header_microphone_button {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  background: black;
+
+  position: absolute;
+  left: 75%;
+  top: 20%;
+}
+
+/* -------------------------------------- header結束 => 1. 麥克風(icon) ------------------------------------  */
+#header .container .header_end .header_microphone_button i {
+  font-size: 25px;
+  color: white;
+
+  position: absolute;
+  left: 30%;
+  top: 25%;
+
+  cursor: pointer;
+}
+
+/* -------------------------------------- header結束 => 2. 帳戶(button) ------------------------------------  */
+#header .container .header_end .header_account_button {
+  width: 50px;
+  height: 50px;
+
+  background: black;
+  border-radius: 50%;
+
+  position: absolute;
+  right: 5%;
+  top: 20%;
+}
+
+/* -------------------------------------- header結束 => 2. 帳戶(img) ------------------------------------  */
+
+#header .container .header_end .header_account_button img {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: black;
+
+  position: absolute;
+  left: -3%;
+  top: -3%;
+
+  cursor: pointer;
+
+  z-index: 1;
+}
+
+/* _______________________________________ sidebar側邊欄(內容) =>  ______________________________________________ */
+
+/* --------------------------------------- sidebar側邊欄(內容) ------------------------------------  */
+#sidebar {
+  width: 20%;
+  /* 高度 => 100% - 12%(header) = 88% */
+  height: 88%;
+
+  /* 內縮 12px (padding => 內容跟邊框之間的空間) */
+  padding: 12px;
+
+  /* 固定版面 */
+  position: fixed;
+
+  left: 0;
+
+  /* 從頂部往下 12% => 上邊會離頁面頂端 12% */
+  top: 12%;
+
+  /* 滾動軸 */
+  overflow: auto;
+
+  background: violet;
+}
+
+/* -------------------------------------- sidebar側邊欄(內容)_區塊1 ------------------------------------  */
+#sidebar .section1 {
+  width: 100%;
+
+  /* 下框線 */
+  border-bottom: 1px solid #999;
+
+  /* 下邊緣空白 => 下框線跟文字框的距離 */
+  padding: 0 0 10px;
+
+  /* background: rgb(55, 193, 131); */
+}
+
+/* -------------------------------------- sidebar側邊欄(內容)_區塊1_文字 => 1. 首頁、2. Shorts、3. 訂閱內容 ------------------------------------  */
+.menu {
+  width: 95%;
+
+  /* background: orange; */
+}
+
+/* -------------------------------------- sidebar側邊欄(內容)_區塊1_文字 => 1. 首頁、2. Shorts、3. 訂閱內容 ------------------------------------  */
+.menu li {
+  height: 10%;
+
+  /* 字體大小 */
+  font-size: 1.3rem;
+
+  /* 字體顏色 */
+  color: white;
+
+  /* 設定框線 */
+  border: 1px solid red;
+
+  /* li的距離加寬(每個 li 上、下都加寬) */
+  padding: 15px;
+
+  /* 文字框變圓角 */
+  border-radius: 15px;
+
+  /* 手指 */
+  cursor: pointer;
+
+  /* 行高 => 調整文字「上下的距離」(單行文字垂直居中) */
+  line-height: 1rem;
+
+  /*  隱藏段落的圓點  */
+  list-style-type: none;
+
+  background: rgb(17, 149, 206);
+}
+
+/* -------------------------------------- sidebar側邊欄(內容)_區塊1_文字(icon) ------------------------------------  */
+.menu li i {
+  /* 字體大小 */
+  font-size: 1.8rem;
+
+  /* 讓右邊有空格 */
+  margin-right: 30px;
+
+  /* 讓右邊有空格 */
+  margin-left: 10px;
+
+  /* 讓字靠上對齊 */
+  vertical-align: middle;
+
+  /* background: rgb(226,   134, 42); */
+}
+
+/* -------------------------------------- sidebar側邊欄(內容)_區塊1_文字(文字設定) ------------------------------------  */
+.menu span {
+  align-items: center;
+}
+
+/* -------------------------------------- sidebar側邊欄(內容)_區塊2_文字 => 1. 個人中心、2. 觀看紀錄、3. 播放清單、4. 你的影片、5. 你的 Podcast、6. 稍後觀看、7. 喜歡的影片 ------------------------------------  */
+#sidebar .section2 {
+  width: 100%;
+
+  /* 下框線 */
+  border-bottom: 1px solid #999;
+
+  /* 增加與上面的寬度 (遠離線) */
+  margin-top: 20px;
+
+  /* 下邊緣空白 => 下框線跟文字框的距離 */
+  padding: 0 0 20px;
+
+  /* background: rgb(33, 186, 118); */
+}
+
+/* -------------------------------------- sidebar側邊欄(內容)_區塊3_文字 => 1. 探索、2.發燒影片、3. 音樂、4. 電影、5. 直播、6. 遊戲、7. 新聞、8. 體育、9. 課程、10. Podcast ------------------------------------  */
+#sidebar .section3 {
+  width: 100%;
+
+  /* 下框線 */
+  border-bottom: 1px solid #999;
+
+  /* 增加與上面的寬度 (遠離線) */
+  margin-top: 20px;
+
+  /* 下邊緣空白 => 下框線跟文字框的距離 */
+  padding: 0 0 20px;
+
+  /* background: rgb(33, 186, 118); */
+}
+
+/* -------------------------------------- sidebar側邊欄(內容)_區塊4_文字 => 1. 更多 YouTube 功能、2. YouTube Premium、3. YouTube 工作室、4. YouTube Music、5. YouTube Kids ------------------------------------  */
+#sidebar .section4 {
+  width: 100%;
+
+  /* 下框線 */
+  border-bottom: 1px solid #999;
+
+  /* 增加與上面的寬度 (遠離線) */
+  margin-top: 20px;
+
+  /* 下邊緣空白 => 下框線跟文字框的距離 */
+  padding: 0 0 20px;
+
+  /* background: rgb(33, 186, 118); */
+}
+
+/* -------------------------------------- sidebar側邊欄(內容)_區塊5_文字 => 1. 設定、2. 檢舉紀錄、3. 說明、4. 提供意見 ------------------------------------  */
+#sidebar .section5 {
+  width: 100%;
+
+  /* 下框線 */
+  border-bottom: 1px solid #999;
+
+  /* 增加與上面的寬度 (遠離線) */
+  margin-top: 20px;
+
+  /* 下邊緣空白 => 下框線跟文字框的距離 */
+  padding: 0 0 20px;
+
+  /* background: rgb(33, 186, 118); */
+}
+
+/*  _______________________________________ 內容區 ______________________________________________  */
+
+#main {
+  /* 留出 header 的高度 */
+  /* margin-top: 6%; */
+  padding: 12% 10px 0;
+
+  /* 留出 sidebar 的寬度 */
+  margin-left: calc(20% + 20px);
+
+  /* padding-top: 20%; */
+
+  width: calc(80% - 20px);
+
+  /* float: right; */
+
+  /* overflow: auto; */
+
+  color: black;
+  background: yellow;
+  border: 1px solid black;
+  overflow: hidden;
+}
+
+/* 捲軸滑塊 */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.col {
+  float: left;
+  border: 1px solid black;
+  font-size: 1rem;
+  width: 25%;
+  /* width: 300px;
+  height: 50%; */
+
+  background: violet;
+}
+
+.col img {
+  width: 100%;
+}
+
+/* ---------------------------- (重寫)html,body ------------------------------------ */
+
+/* 滿版 (抓到瀏覽器的高度) */
+/* html,
+body {
+  height: 100%;
+} */
+
+/* body { */
+/* 設定字體 */
+/* font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 80%;
+
+  background: blue;
+  margin: auto;
+}
+
+.h-100 {
+  height: 100% !important;
+} */
+
+/* ----------------------------- #header ------------------------------------ */
+
+/* 最上方 */
+/* #header {
+  width: 100%;
+  height: 70px;
+
+  position: fixed;
+
+  background: yellow; */
+
+/* float: right; */
+/* } */
+
+/* 側邊欄 logo */
+/* #header > i {
+  font-size: 20px;
+  color: rgb(100, 100, 100);
+
+  position: absolute;
+  left: 3%;
+  top: 35%; */
+
+/* transform: translate(-3%, -35%); */
+/* } */
+
+/* Yotube logo */
+/* #header .logo {
+  color: red;
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  position: absolute;
+
+  left: 6%;
+  top: 25%; */
+
+/* transform: translate(-6%, -25%); */
+/* } */
+
+/* Yotube 字體設定 */
+/* #header .logo span {
+  display: inline-block;
+  color: black;
+  font-weight: bold;
+  font-size: 26px;
+
+  margin: 0 0 20px 0;
+  cursor: pointer;
+} */
+
+/* #header .input {
+  width: 700px;
+  height: 50px; */
+
+/* 圓弧 */
+/* border-radius: 50px; */
+
+/* 邊框 */
+/* border: 1px solid #999; */
+
+/* 背景 */
+/* background: linear-gradient(90deg, #fff 88%, #efeeee 12%); */
+
+/* 水平橫向 */
+/* display: inline-block;
+
+  position: absolute;
+
+  left: 170%;
+  bottom: 15%;
+} */
+
+/* #header .input > i {
+  color: #000000;
+
+  position: absolute;
+
+  left: 92%;
+  bottom: 18%; */
+
+/* border: 0.05px; */
+/* } */
