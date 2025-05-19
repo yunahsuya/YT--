@@ -3,6 +3,7 @@
 *::after {
   box-sizing: border-box;
 }
+
 /* ----------------------------------- 頭以外 ------------------------------------  */
 
 html,
@@ -13,7 +14,7 @@ body {
   /* 設定字體 */
   font-family: "Roboto", "Arial", sans-serif;
 
-  /* background: black; */
+  background: rgb(39, 39, 39);
 }
 
 /* ----------------------------------- 最上面 ------------------------------------  */
@@ -362,7 +363,9 @@ body {
 #main {
   /* 留出 header 的高度 */
   /* margin-top: 6%; */
-  padding: 12% 10px 0;
+  /* padding: 12% 10px 0; */
+
+  margin-top: 150px;
 
   /* 留出 sidebar 的寬度 */
   margin-left: calc(20% + 20px);
@@ -376,9 +379,11 @@ body {
   /* overflow: auto; */
 
   color: black;
-  background: yellow;
-  border: 1px solid black;
+  /* background: yellow; */
+  /* border: 1px solid black; */
   overflow: hidden;
+
+
 }
 
 /* 捲軸滑塊 */
@@ -395,11 +400,35 @@ body {
   /* width: 300px;
   height: 50%; */
 
+  border-radius: 20px;
+
+  margin: 5px;
+
+
+
   background: violet;
 }
 
 .col img {
   width: 100%;
+  border-radius: 20px;
+}
+
+
+h1,
+p {
+  padding: 5px 0px 5px 10px;
+  /* padding-bottom: 5px;
+  padding-left: 10px; */
+  line-height: 20px;
+
+  color: #ffffff;
+
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+h1 {
+  font-size: 18px;
 }
 
 /* ---------------------------- (重寫)html,body ------------------------------------ */
